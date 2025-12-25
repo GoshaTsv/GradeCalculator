@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gradecalculator.HelloController">
+   <children>
+      <ProgressBar fx:id="gradeBar" layoutX="48.0" layoutY="276.0" prefHeight="31.0" prefWidth="826.0" progress="0.0" style="-fx-border-color: #777777;" />
+      <Label fx:id="resultGrade" alignment="CENTER" layoutX="888.0" layoutY="229.0" prefHeight="125.0" prefWidth="115.0" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto Slab Bold" size="84.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7082456350326538" green="0.4526315927505493" blue="0.9473684430122375" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09107212722301483" green="0.11365041881799698" blue="0.7684210538864136" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="33.0" layoutY="14.0" text="Калькулятор среднего балла">
+         <font>
+            <Font name="Century Gothic" size="53.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="87.0" text="сделанный на JavaFX">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Label>
+      <Line endX="658.7665405273438" endY="1.52587890625E-5" fill="#bfbfbf" layoutX="301.0" layoutY="131.0" startX="-241.9406280517578" startY="1.52587890625E-5" stroke="#bfbfbf" />
+      <VBox alignment="CENTER" layoutX="48.0" layoutY="149.0" prefHeight="94.0" prefWidth="162.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="206.0" text="Система баллов">
+               <font>
+                  <Font name="Century Gothic" size="19.0" />
+               </font>
+            </Label>
+            <HBox>
+               <children>
+                  <Button fx:id="changeMaxGradeTo5Button" mnemonicParsing="false" onAction="#changeMaxGradeTo5" prefHeight="41.0" prefWidth="53.0" style="-fx-background-color: #FFFFFF;" text="5">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Century Gothic" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="changeMaxGradeTo10Button" mnemonicParsing="false" onAction="#changeMaxGradeTo10" prefHeight="41.0" prefWidth="53.0" style="-fx-background-color: #FFFFFF;" text="10">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Century Gothic" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="changeMaxGradeTo12Button" mnemonicParsing="false" onAction="#changeMaxGradeTo12" prefHeight="41.0" prefWidth="53.0" style="-fx-background-color: #FFFFFF;" text="12">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Century Gothic" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="834.0" layoutY="151.0" prefHeight="94.0" prefWidth="162.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="206.0" text="Порог округления">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <HBox>
+               <children>
+                  <Button fx:id="changeRoundTo05Button" mnemonicParsing="false" onAction="#changeRoundTo05" prefHeight="41.0" prefWidth="53.0" style="-fx-background-color: #FFFFFF;" text="0.5">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Century Gothic" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="changeRoundTo06Button" mnemonicParsing="false" onAction="#changeRoundTo06" prefHeight="41.0" prefWidth="53.0" style="-fx-background-color: #FFFFFF;" text="0.6">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Century Gothic" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="changeRoundTo07Button" mnemonicParsing="false" onAction="#changeRoundTo07" prefHeight="41.0" prefWidth="53.0" style="-fx-background-color: #FFFFFF;" text="0.7">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font name="Century Gothic" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="49.0" layoutY="321.0" text="оценки:">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Label>
+      <VBox layoutX="71.0" layoutY="366.0">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="874.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#gradeButton0" prefHeight="66.0" prefWidth="177.0" style="-fx-background-radius: 5px; -fx-background-color: #FFFFFF;" text="0">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="deleteLastGradeButton" mnemonicParsing="false" onAction="#deleteLastGrade" prefHeight="66.0" prefWidth="356.0" style="-fx-background-radius: 5px; -fx-background-color: #000000;" text="Удалить последнюю оценку" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="21.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="deleteAllGradesButton" mnemonicParsing="false" onAction="#deleteAllGrades" prefHeight="66.0" prefWidth="345.0" style="-fx-background-radius: 5px; -fx-background-color: #FF5555;" text="Очистить список оценок" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="23.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#gradeButton1" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton2" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="2" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton3" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="3" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton4" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="4" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton5" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="5" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="NumberRow3">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#gradeButton6" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="6" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton7" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="7" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton8" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="8" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton9" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="9" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton10" prefHeight="64.0" prefWidth="175.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="10" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="NumberRow4">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#gradeButton11" prefHeight="64.0" prefWidth="437.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="11" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#gradeButton12" prefHeight="66.0" prefWidth="437.0" style="-fx-background-radius: 5px; -fx-background-color: #3430ff;" text="12" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Slab Bold" size="32.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Rectangle fx:id="resultBackground" fill="#ff28283b" height="71.0" layoutX="43.0" layoutY="657.0" stroke="#ab8e8e00" strokeType="INSIDE" width="926.0" />
+      <Label fx:id="resultLabel" layoutX="100.0" layoutY="678.0" text="Кол-во оценок: 1, средний балл: 3.00, итоговая оценка: 3.">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="allGrades" layoutX="136.0" layoutY="319.0" prefHeight="29.0" prefWidth="878.0" wrapText="true">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
