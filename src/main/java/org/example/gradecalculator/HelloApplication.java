@@ -18,6 +18,10 @@ public class HelloApplication extends Application {
         stage.setTitle("Калькулятор среднего балла");
         stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("New Project.png"))));
         stage.setScene(scene);
+        stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                stage.setMaximized(false);
+        });
         stage.show();
     }
 }
