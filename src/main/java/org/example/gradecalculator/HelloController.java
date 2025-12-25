@@ -36,122 +36,62 @@ public class HelloController {
 
     public void gradeButton12(ActionEvent event) {
         grades.add(12);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton11(ActionEvent event) {
         grades.add(11);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton10(ActionEvent event) {
         grades.add(10);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton9(ActionEvent event) {
         grades.add(9);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton8(ActionEvent event) {
         grades.add(8);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton7(ActionEvent event) {
         grades.add(7);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton6(ActionEvent event) {
         grades.add(6);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton5(ActionEvent event) {
         grades.add(5);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton4(ActionEvent event) {
         grades.add(4);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton3(ActionEvent event) {
         grades.add(3);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton2(ActionEvent event) {
         grades.add(2);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void gradeButton1(ActionEvent event) {
         grades.add(1);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
+        applyChanges();
     }
 
     public void deleteAllGrades(ActionEvent event) {
@@ -172,13 +112,7 @@ public class HelloController {
 
     public void gradeButton0(ActionEvent event) {
         grades.add(0);
-        average = countAverage(grades);
-        int result = countResult(average);
-        resultGrade.setText(String.valueOf(result));
-        gradeBar.setProgress((average /maxGrade));
-        deleteAllGradesButton.setDisable(false);
-        deleteLastGradeButton.setDisable(false);
-        average = 0;
+        applyChanges();
     }
 
     public void deleteLastGrade(ActionEvent event) {
@@ -192,6 +126,9 @@ public class HelloController {
             resultLabel.setText("");
             resultGrade.setText("");
             average = 0;
+        }
+        else{
+            applyChanges();
         }
     }
 
@@ -355,5 +292,13 @@ public class HelloController {
         resultBackground.setVisible(false);
         resultLabel.setText("");
         resultGrade.setText("");
+    }
+    private void applyChanges(){
+        average = countAverage(grades);
+        int result = countResult(average);
+        resultGrade.setText(String.valueOf(result));
+        gradeBar.setProgress((average /maxGrade));
+        deleteAllGradesButton.setDisable(false);
+        deleteLastGradeButton.setDisable(false);
     }
 }
